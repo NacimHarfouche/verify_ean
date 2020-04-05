@@ -1,0 +1,104 @@
+/* 
+#04202C
+#304040
+#5B7065
+#C9D1C8
+ */
+
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* GLOBAL */
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background-color: #304040;
+	margin: auto;
+	font-size: 1.6rem;
+	color: #04202C;
+}
+a {
+	color: black;
+}
+a:visited {
+	color: white;
+}
+a:hover {
+	color: #c9d1c8;
+}
+
+/* header */
+header {
+	text-align: center;
+	color: #C9D1C8;
+}
+
+/* main */
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
+	margin: auto;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #C9D1C8;
+	border: #5B7065 solid 3px;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+section h3 {
+	text-align: center;
+}
+section article {
+	margin-bottom: 1rem;
+}
+#instruction a:hover {
+	color: red;
+	font-weight: bold;
+}
+section input, section button {
+	margin: 0.5rem auto;
+	width: 30%;
+}
+section p {
+	text-align: center;
+}
+ul, ol {
+	width: 100%;
+	margin: auto;
+}
+
+/* table */
+table {
+	width: 100%;
+	border: 1px solid #333;
+	border-collapse: collapse;
+}
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+td {
+	border: 1px solid #333;
+}
+tr {
+	width: 100%;
+	text-align: center;
+}
+
+/* footer */
+footer {
+	text-align: center;
+	color: #C9D1C8;
+}
+

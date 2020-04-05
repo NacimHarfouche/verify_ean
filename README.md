@@ -1,2 +1,2 @@
 # verify_ean
-Verificator for EAN :
+EAN file validator 

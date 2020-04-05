@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verify EAN</title>
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- css style -->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <!-- Javascript Class -->
+    <script src="./js/CSVHandler.js"></script>
+    <script src="./js/FormatArray.js"></script>
+    <script src="./js/VerifyArray.js"></script>
+    <!-- bootstrap -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+</head>
+<body>
+    <header>
+        <h1>EAN Verificator</h1>
+    </header>
+
+    <main>
+        <section id="instruction" class="setStyle">
+            <article>
+                <h3>- Prerequisite -</h3>
+                <ul>
+                    <li>The file must be in .csv format</li>
+                    <li>The accepted separtor are ";" and "|"</li>
+                    <li>Like on these screenshot : <a href="https://i.imgur.com/5F97SUw.png" target="_blank" rel="noopener noreferrer">example 1</a> and <a href="https://i.imgur.com/UNuz0Wc.png" target="_blank" rel="noopener noreferrer">example 2</a></li>
+                    <li>Here is an example file : <a href="https://docs.google.com/spreadsheets/d/10mTkH6kN57ttNW6-sGI9KmDibzcaGtcOB7GJLRLmgCs/export?format=csv" download target="_blank">Download</a></li>
+                 </ul>
+            </article>
+            <article>
+                <h3>- Instruction -</h3>
+               <ol>
+                   <li>Click on "Choose File"</li>
+                   <li>Choose the EAN file to check</li>
+                   <li>Click on "Verify"</li>
+                </ol>
+            </article>
+        </section>
+        <section class="setStyle">
+            <input type="file" id="inputCSV" />
+            <button type="button" class="btn btn-secondary">Verify</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © 2019, Created by 
+            <a href="https://github.com/NacimHarfouche" target="_blank" rel="noopener noreferrer">Nacim Harfouche</a>
+            <a href="https://twitter.com/ArtesEveni" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/nacim-harfouche-912b14125/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        </p>
+    </footer>
+
+    <!-- Script Javascript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
