@@ -58,6 +58,7 @@ document.getElementById('inputCSV').addEventListener('change', function() {
     if (this.files && this.files[0]) {
         csvHandler.setFile(this.files[0]);
         csvHandler.readIt();
+        document.querySelector("button").disabled = false;
     }
 });
 
