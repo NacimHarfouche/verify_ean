@@ -4,7 +4,7 @@ let formatArray = new FormatArray();
 let verifyArray = new VerifyArray();
 
 // create a table and append it
-function appendTable() {
+function appendTableDOM() {
     let tableElt = document.createElement("table");
     tableElt.innerHTML = `
         <thead>
@@ -21,6 +21,7 @@ function appendTable() {
         </tbody>
     `;
     let sectionElt = document.createElement("section");
+    sectionElt.id = "result";
     // append elements
     sectionElt.appendChild(tableElt);
     document.querySelector("main").appendChild(sectionElt);
@@ -58,19 +59,27 @@ document.getElementById('inputCSV').addEventListener('change', function() {
     if (this.files && this.files[0]) {
         csvHandler.setFile(this.files[0]);
         csvHandler.readIt();
+        // enable the button to click
         document.querySelector("button").disabled = false;
     }
 });
 
 // when the button is push
 document.querySelector("button").addEventListener("click", () => {
+    // remove the previous section containt the result
+    let sectionElt = document.getElementById("result");
+    if (sectionElt != null) sectionElt.remove();
+    // proced of format and verify the ean -> POO
     let eanArray = csvHandler.getArray();
     eanArray = formatArray.getformattedArray(eanArray);
     let eanInError = verifyArray.getVerifyEAN(eanArray);
+    // verify that the array is not empty to display
     if (eanInError.length > 0) {
-        appendTable();
+        appendTableDOM();
         displayErrors(eanInError);
     } else {
         displayOk();
     }
+    // disable the button
+    document.querySelector("button").disabled = true; 
 });
